@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マインクラフトサーバー基本法</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap');
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f1f5f9;
+            color: #1e293b;
+            line-height: 1.8;
+        }
+
+        .serif {
+            font-family: 'Noto Serif JP', serif;
+        }
+
+        .container-custom {
+            max-width: 850px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 50px 70px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border-radius: 4px;
+            border-top: 12px solid #334155; /* Slate color for administrative law */
+        }
+
+        .law-header {
+            border-bottom: 2px solid #e2e8f0;
+            margin-bottom: 40px;
+            padding-bottom: 25px;
+            text-align: center;
+        }
+
+        .part-title {
+            margin-top: 50px;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #cbd5e0;
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #334155;
+        }
+
+        .article {
+            margin-bottom: 28px;
+            padding: 18px 25px;
+            background: #f8fafc;
+            border-left: 5px solid #64748b;
+            border-radius: 0 4px 4px 0;
+            transition: transform 0.2s ease;
+        }
+
+        .article:hover {
+            transform: translateX(5px);
+            background: #f1f5f9;
+        }
+
+        .article-title {
+            font-weight: bold;
+            color: #1e293b;
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .article-content {
+            font-size: 0.98rem;
+            color: #334155;
+        }
+
+        .law-list {
+            margin-top: 10px;
+            padding-left: 1.5rem;
+        }
+
+        .law-list li {
+            list-style-type: none;
+            position: relative;
+            margin-bottom: 4px;
+        }
+
+        .law-list li::before {
+            content: "■";
+            color: #64748b;
+            font-size: 0.7rem;
+            position: absolute;
+            left: -1.2rem;
+            top: 0.1rem;
+        }
+
+        .toc {
+            background: #f1f5f9;
+            padding: 24px;
+            border-radius: 6px;
+            margin-bottom: 40px;
+            border: 1px solid #e2e8f0;
+        }
+
+        @media (max-width: 640px) {
+            .container-custom {
+                margin: 0;
+                padding: 25px;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-custom">
+        <header class="law-header">
+            <h1 class="text-3xl font-bold serif mb-2">マインクラフトサーバー基本法</h1>
+            <p class="text-gray-500 text-sm italic">サーバー行政・経済・建築の基礎となる法律</p>
+        </header>
+
+        <nav class="toc">
+            <h2 class="text-lg font-bold mb-4 border-b border-slate-300 pb-1">目次</h2>
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-sm text-slate-700 font-medium">
+                <li><a href="#part1" class="hover:text-slate-900 hover:underline transition">第一編 総則</a></li>
+                <li><a href="#part2" class="hover:text-slate-900 hover:underline transition">第二編 租税</a></li>
+                <li><a href="#part3" class="hover:text-slate-900 hover:underline transition">第三編 財政</a></li>
+                <li><a href="#part4" class="hover:text-slate-900 hover:underline transition">第四編 通貨</a></li>
+                <li><a href="#part5" class="hover:text-slate-900 hover:underline transition">第五編 建築及び都市計画</a></li>
+                <li><a href="#part6" class="hover:text-slate-900 hover:underline transition">第六編 行政手続</a></li>
+                <li><a href="#part7" class="hover:text-slate-900 hover:underline transition">第七編 国家賠償</a></li>
+                <li><a href="#part8" class="hover:text-slate-900 hover:underline transition">第八編 補則</a></li>
+            </ul>
+        </nav>
+
+        <!-- 第一編 -->
+        <section id="part1">
+            <h2 class="part-title serif">第一編　総則</h2>
+            <div class="article">
+                <span class="article-title">第1条（目的）</span>
+                <p class="article-content">この法律は、サーバーの行政運営、租税、財政、通貨、建築、行政手続及び国家賠償に関する基本事項を定め、憲法の理念に基づく秩序あるサーバー運営を実現することを目的とする。</p>
+            </div>
+            <div class="article">
+                <span class="article-title">第2条（適用範囲）</span>
+                <p class="article-content">この法律は、本サーバー内において行われるすべての行政行為及びこれに関連する行為に適用する。</p>
+            </div>
+            <div class="article">
+                <span class="article-title">第3条（行政の基本原則）</span>
+                <p class="article-content">行政機関は、法令に基づき、公正かつ誠実にその職務を行わなければならない。</p>
+            </div>
+        </section>
+
+        <!-- 第二編 -->
+        <section id="part2">
+            <h2 class="part-title serif">第二編　租税</h2>
+            <div class="article">
+                <span class="article-title">第4条（租税の種類）</span>
+                <p class="article-content">本サーバーにおける租税は、次に掲げるものとする。</p>
+                <ul class="law-list article-content">
+                    <li>一　基本税</li>
+                    <li>二　所得税</li>
+                    <li>三　財産税</li>
+                    <li>四　取引税</li>
+                    <li>五　特別税</li>
+                </ul>
+            </div>
+            <div class="article">
+                <span class="article-title">第5条（累進課税）</span>
+                <p class="article-content">所得税及び財産税は、納税者の資産状況及び収入に応じた累進課税方式により課する。</p>
+            </div>
+            <div class="article">
+                <span class="article-title">第6条（課税の根拠）</span>
+                <p class="article-content">租税は、法律に定める場合に限り、課することができる。</p>
+            </div>
+            <div class="article">
+                <span class="article-title">第7条（納税義務）</span>
+                <p class="article-content">サーバーメンバーは、法律の定めるところにより、納税の義務を負う。</p>
+            </div>
+        </section>
+
+        <!-- 第三編 -->
+        <section id="part3">
+            <h2 class="part-title serif">第三編　財政</h2>
+            <div class="article">
+                <span class="article-title">第8条（税収の使途）</span>
+                <p class="article-content">税収は、次に掲げる目的に使用する。</p>
+                <ul class="law-list article-content">
+                    <li>一　公共事業及びインフラ整備</li>
+                    <li>二　治安維持及び司法運営</li>
+                    <li>三　サーバー管理及び運営</li>
+                    <li>四　イベント及び共同事業</li>
+                    <li>五　国務大臣及び行政機関の給与</li>
+                    <li>六　その他公共の利益に資する事業</li>
+                </ul>
+            </div>
+            <div class="article">
+                <span class="article-title">第9条（国家予算）</span>
+                <p class="article-content">国家予算は、内閣総理大臣が作成し、議会の議決を経なければならない。</p>
+            </div>
+            <div class="article">
+                <span class="article-title">第10条（決算）</span>
+                <p class="article-content">国家の収支については、一定期間ごとに決算を行い、その結果を議会に報告しなければならない。</p>
+            </div>
+        </section>
+
+        <!-- 第四編 -->
+        <section id="part4">
+            <h2 class="part-title serif">第四編　通貨</h2>
+            <div class="article">
+                <span class="article-title">第11条（通貨の管理）</span>
+                <p class="article-content">通貨の発行及び管理は、内閣総理大臣の権限に属する。</p>
+            </div>
+            <div class="article">
+                <span class="article-title">第12条（通貨発行の制限）</span>
+                <p class="article-content">通貨の発行は、サーバー経済の安定を害しない範囲において行わなければならない。</p>
+            </div>
+            <div class="article">
+                <span class="article-title">第13条（インフレ対策）</span>
+                <p class="article-content">物価が著しく上昇又は下落した場合、内閣総理大臣は、通貨回収、発行抑制その他必要な措置を講ずることができる。</p>
+            </div>
+        </section>
+
+        <!-- 第五編 -->
+        <section id="part5">
+            <h2 class="part-title serif">第五編　建築及び都市計画</h2>
+            <div class="article">
+                <span class="article-title">第14条（建築届出制）</span>
+                <p class="article-content">建築を行おうとする者は、あらかじめ行政機関に対し、所定の事項を記載した届出を行い、その受理を受けなければならない。</p>
+            </div>
+            <div class="article">
+                <span class="article-title">第15条（無届建築の禁止）</span>
+                <p class="article-content">前条の届出を行わずに建築を行うことを禁止する。</p>
+            </div>
+            <div class="article">
+                <span class="article-title">第16条（建築基準）</span>
+                <p class="article-content">建築は、安全性、景観、サーバー負荷及び周辺環境に配慮して行わなければならない。</p>
+            </div>
+            <div class="article">
+                <span class="article-title">第17条（用途地域）</span>
+                <p class="article-content">用途地域は、次に掲げる区分とする。</p>
+                <ul class="law-list article-content">
+                    <li>一　住宅地域</li>
+                    <li>二　商業地域</li>
+                    <li>三　工業地域</li>
+                    <li>四　公共地域</li>
+                    <li>五　特別区域</li>
+                </ul>
+            </div>
+            <div class="article">
+                <span class="article-title">第18条（撤去命令）</span>
+                <p class="article-content">建築基準又は届出制度に違反した建築については、行政機関は、是正又は撤去を命ずることができる。</p>
+            </div>
+        </section>
+
+        <!-- 第六編 -->
+        <section id="part6">
+            <h2 class="part-title serif">第六編　行政手続</h2>
+            <div class="article">
+                <span class="article-title">第19条（行政手続の原則）</span>
+                <p class="article-content">行政機関は、処分その他の行政行為を行うにあたり、当事者の権利及び利益に配慮し、公正な手続を確保しなければならない。</p>
+            </div>
+            <div class="article">
+                <span class="article-title">第20条（不利益処分の理由提示）</span>
+                <p class="article-content">行政機関は、不利益処分を行う場合には、その理由を当事者に対して明示しなければならない。</p>
+            </div>
+            <div class="article">
+                <span class="article-title">第21条（意見陳述の機会）</span>
+                <p class="article-content">行政機関は、不利益処分を行う前に、当事者に意見を述べる機会を与えなければならない。ただし、緊急を要する場合は、この限りでない。</p>
+            </div>
+            <div class="article">
+                <span class="article-title">第22条（緊急処分）</span>
+                <p class="article-content">サーバーの秩序又は安全に重大かつ急迫した危険がある場合、行政機関は、事前の手続を経ずに処分を行うことができる。</p>
+            </div>
+        </section>
+
+        <!-- 第七編 -->
+        <section id="part7">
+            <h2 class="part-title serif">第七編　国家賠償</h2>
+            <div class="article">
+                <span class="article-title">第23条（国家賠償責任）</span>
+                <p class="article-content">行政機関又は公務員が、職務の執行において法律に違反し、サーバーメンバーに損害を与えた場合、国家はこれを賠償する責任を負う。</p>
+            </div>
+            <div class="article">
+                <span class="article-title">第24条（賠償の方法）</span>
+                <p class="article-content">賠償は、アイテムの返還、通貨の支給、建築の復旧その他相当な方法によって行う。</p>
+            </div>
+        </section>
+
+        <!-- 第八編 -->
+        <section id="part8">
+            <h2 class="part-title serif">第八編　補則</h2>
+            <div class="article">
+                <span class="article-title">第25条（委任）</span>
+                <p class="article-content">この法律の施行に必要な細則は、内閣総理大臣が定める。</p>
+            </div>
+            <div class="article">
+                <span class="article-title">第26条（施行）</span>
+                <p class="article-content">この法律は、公布の日から施行する。</p>
+            </div>
+        </section>
+
+        <footer class="mt-16 pt-8 border-t border-slate-200 text-center text-slate-400 text-xs">
+            <p>&copy; Minecraft Server Administrative Archive</p>
+        </footer>
+    </div>
+
+</body>
+</html>
+
